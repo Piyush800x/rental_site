@@ -29,6 +29,28 @@ nav .nav-items{
   flex: 1;
   padding: 0 0 0 40px;
 }
+
+/* Props for right most buttons */
+nav .nav-items-right {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 50px 0 0; 
+}
+nav .nav-items-right li{
+  list-style: none;
+  padding: 0 15px;
+}
+nav .nav-items-right li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+nav .nav-items-right li a:hover{
+  color: #ff3d00;
+}
+
+
 nav .nav-items li{
   list-style: none;
   padding: 0 15px;

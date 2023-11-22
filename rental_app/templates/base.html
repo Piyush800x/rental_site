@@ -20,8 +20,8 @@
                Rental Site
             </div>
             <div class="nav-items">
-               <li><a href="#">Home</a></li>
-               <li><a href="#">About</a></li>
+               <li><a href="/">Home</a></li>
+               <li><a href="/about">About</a></li>
             </div>
             <div class="cancel-icon">
                <span class="fas fa-times"></span>
@@ -29,7 +29,7 @@
             <div class="nav-items-right">
                <li><a href="#">Contact Us</a></li>
                {% if not user.is_authenticated %}
-               <li><a href="{% provider_login_url 'google' %}?next=/">Sign In/Register</a></li>
+               <li><a href="/login">Sign In/Register</a></li>
                {% endif %}
                {% if user.is_authenticated %}
                <li><a href="{% url 'account_logout' %}?next=/">Logout</a></li>

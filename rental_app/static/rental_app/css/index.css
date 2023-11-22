@@ -1,28 +1,29 @@
-/*  */
-.box-container {
-    background-color: #fff; /* Box background color */
-    padding: 50px;
-    width: 350px;
+.box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 300px;
     text-align: center;
-    border-radius: 10px; /* Optional: rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: box shadow */
-  }
-  
-  .rental-text {
-    font-size: 3em; /* Adjust the font size as needed */
-    font-weight: bold;
-    color: #333; /* Text color */
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none; /* Remove underline from the link */
-    cursor: pointer; /* Change cursor on hover */
-  }
-  .rentalfooding-text {
-    font-size: 3em; /* Adjust the font size as needed */
-    font-weight: bold;
-    color: #333; /* Text color */
-    text-align: center;
-    text-transform: uppercase;
-    text-decoration: none; /* Remove underline from the link */
-    cursor: pointer; /* Change cursor on hover */
-  }
+}
+
+/* Style for the image inside the box */
+.box img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Style for the link inside the box */
+.box a {
+    display: block;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Change link color on hover */
+.box a:hover {
+    background-color: #2980b9;
+}

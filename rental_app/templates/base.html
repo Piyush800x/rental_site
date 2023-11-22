@@ -22,16 +22,9 @@
                <li><a href="#">Home</a></li>
                <li><a href="#">About</a></li>
             </div>
-            <!-- <div class="search-icon">
-               <span class="fas fa-search"></span>
-            </div> -->
             <div class="cancel-icon">
                <span class="fas fa-times"></span>
             </div>
-            <!-- <form action="#">
-               <input type="search" class="search-data" placeholder="Search" required>
-               <button type="submit" class="fas fa-search"></button>
-            </form> -->
             <div class="nav-items-right">
                <li><a href="#">Contact Us</a></li>
                {% if not user.is_authenticated %}
@@ -41,6 +34,14 @@
                <li><a href="{% url 'account_logout' %}?next=/">Logout</a></li>
                {% endif %}
             </div>
+            <div class="toggle-container">
+               <label class="toggle-label-left">Buyer</label>
+               <label class="toggle-switch">
+                 <input type="checkbox">
+                 <span class="toggle-slider"></span>
+               </label>
+               <label class="toggle-label-right">Seller</label>
+             </div>
          </nav>
     </div>
     <div class="container">

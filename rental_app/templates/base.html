@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{% static 'rental_app/css/base.css' %}">
     <link rel="stylesheet" href="{% static 'rental_app/css/index.css' %}">
     <script src="{% static 'rental_app/js/base.js' %}"></script>
-    <title>Rental Site</title>
+    <title>Rental Guruji</title>
 </head>
 <body>
    {% load socialaccount %}
@@ -17,10 +17,19 @@
                <span class="fas fa-bars"></span>
             </div>
             <div class="logo">
-               Rental Site
+               Rental Guruji
             </div>
             <div class="nav-items">
                <li><a href="/">Home</a></li>
+               <!-- Dropdown menu -->
+               <li class="dropdown">
+                  <a href="#" class="dropbtn">Rent</a>
+                  <div class="dropdown-content">
+                     <a href="#">Rental</a>
+                     <a href="#">Rental and Fooding</a>
+                     <a href="#">Lease</a>
+                  </div>
+               </li>
                <li><a href="/about">About</a></li>
             </div>
             <div class="cancel-icon">
@@ -29,20 +38,12 @@
             <div class="nav-items-right">
                <li><a href="#">Contact Us</a></li>
                {% if not user.is_authenticated %}
-               <li><a href="/login">Sign In/Register</a></li>
+               <li><a href="{% provider_login_url 'google' %}?next=/">Sign In/Register</a></li>
                {% endif %}
                {% if user.is_authenticated %}
                <li><a href="{% url 'account_logout' %}?next=/">Logout</a></li>
                {% endif %}
             </div>
-            <div class="toggle-container">
-               <label class="toggle-label-left">Buyer</label>
-               <label class="toggle-switch">
-                 <input type="checkbox">
-                 <span class="toggle-slider"></span>
-               </label>
-               <label class="toggle-label-right">Seller</label>
-             </div>
          </nav>
          
          

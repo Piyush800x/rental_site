@@ -4,10 +4,11 @@
   padding: 0;
   outline: none;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  
 }
 body{
   background: #f2f2f2;
+  font-family: 'Montserrat', sans-serif;
 }
 nav{
   background: #171c24;
@@ -325,3 +326,4 @@ input:checked + .toggle-slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
+

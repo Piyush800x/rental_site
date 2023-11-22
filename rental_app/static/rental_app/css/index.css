@@ -1,0 +1,28 @@
+/*  */
+.box-container {
+    background-color: #fff; /* Box background color */
+    padding: 50px;
+    width: 350px;
+    text-align: center;
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: box shadow */
+  }
+  
+  .rental-text {
+    font-size: 3em; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #333; /* Text color */
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none; /* Remove underline from the link */
+    cursor: pointer; /* Change cursor on hover */
+  }
+  .rentalfooding-text {
+    font-size: 3em; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: #333; /* Text color */
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none; /* Remove underline from the link */
+    cursor: pointer; /* Change cursor on hover */
+  }

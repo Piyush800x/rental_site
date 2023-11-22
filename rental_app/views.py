@@ -22,6 +22,31 @@ def create(request):
     return render(request, "create.html")
 
 
+def listing(request):
+    return render(request, "listing.html")
+
+
 def create_data(request):
     if request.user.is_authenticated:
-        print(request.user)
+        query = collection.find_one({"username": f"{request.user}"})
+        print(query)
+        if query is None:
+            dic = {
+                "username": f"{request.user}",
+            }
+            collection.insert_one(dic)
+
+    print("Done")
+
+
+def createproduct(request):
+    if request.user.is_authenticated:
+        data = {
+            "name": f"{request.POST.get('name')}",
+            "email": f"{request.POST.get('email')}"
+        }
+        update_data = collection.update_one(
+            {"username": f"{request.user}"},  {'$push': {"listings": data}})
+        print("Updated")
+
+    return render(request, "create.html")

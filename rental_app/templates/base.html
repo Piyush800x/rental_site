@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'rental_app/css/base.css' %}">
     <link rel="stylesheet" href="{% static 'rental_app/css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'rental_app/css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'rental_app/css/create.css' %}">
     <script src="{% static 'rental_app/js/base.js' %}"></script>
     <title>Rental Guruji</title>
 </head>
@@ -23,13 +25,16 @@
                <li><a href="/">Home</a></li>
                <!-- Dropdown menu -->
                <li class="dropdown">
-                  <a href="#" class="dropbtn">Rent</a>
+                  <a href="/" class="dropbtn">Rent</a>
                   <div class="dropdown-content">
                      <a href="#">Rental</a>
                      <a href="#">Rental and Fooding</a>
                      <a href="#">Lease</a>
                   </div>
                </li>
+               {% if user.is_authenticated %}
+               <li><a href="/create">Create</a></li>
+               {% endif %}
                <li><a href="/about">About</a></li>
             </div>
             <div class="cancel-icon">
@@ -38,16 +43,20 @@
             <div class="nav-items-right">
                <li><a href="#">Contact Us</a></li>
                {% if not user.is_authenticated %}
-               <li><a href="{% provider_login_url 'google' %}?next=/">Sign In/Register</a></li>
+               <li class="dropdown">
+                  <a href="/" class="dropbtn">Sign in/Register</a>
+                  <div class="dropdown-content">
+                     <a href="{% provider_login_url 'google' %}?next=/">Buyer</a>
+                     <a href="{% provider_login_url 'google' %}?next=/">Seller</a>
+                  </div>
+               </li>
                {% endif %}
                {% if user.is_authenticated %}
                <li><a href="{% url 'account_logout' %}?next=/">Logout</a></li>
+               
                {% endif %}
             </div>
          </nav>
-         
-         
-         
     </div>
     <div class="container">
         {% block content %}

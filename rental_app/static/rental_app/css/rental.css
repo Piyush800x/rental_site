@@ -1,7 +1,29 @@
-
 .heading1{
     text-align: center;
     margin: 20px;
     font-family: "Caveat";
     font-size: 50px;
 }
+
+/* Search bar */
+.rent-form {
+    width: 400px;
+    height: 40px;
+    margin: auto;
+  }
+  input {
+    padding: 10px 10px;
+    border: 3;
+    font-family: "PT Sans";
+    font-weight: bold;
+    font-size: 15px;
+  }
+  .search {
+    width: 78%;
+  }
+  .submit {
+    width: 78px;
+    background-color: #1c87c9;
+    color: #ffffff;
+    cursor: pointer;
+  }

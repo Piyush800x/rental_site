@@ -25,6 +25,9 @@ def create(request):
 def listing(request):
     return render(request, "listing.html")
 
+def rental(request):
+    return render(request, "rental.html")
+
 
 def create_data(request):
     if request.user.is_authenticated:

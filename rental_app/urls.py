@@ -7,5 +7,5 @@ urlpatterns = [
     path('create', views.create),
     path('listing', views.listing),
     path('createproduct', views.createproduct),
-
+    path('rental', views.rental),
 ]

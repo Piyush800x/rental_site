@@ -4,11 +4,12 @@
   padding: 0;
   outline: none;
   box-sizing: border-box;
+  font-family: "PT Sans";
   
 }
 body{
   background: #f2f2f2;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Caveat";
 }
 nav{
   background: #171c24;

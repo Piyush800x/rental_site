@@ -4,11 +4,19 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Ephesis&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Ephesis&family=PT+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'rental_app/css/base.css' %}">
     <link rel="stylesheet" href="{% static 'rental_app/css/index.css' %}">
     <link rel="stylesheet" href="{% static 'rental_app/css/about.css' %}">
     <link rel="stylesheet" href="{% static 'rental_app/css/create.css' %}">
     <link rel="stylesheet" href="{% static 'rental_app/css/listing.css' %}">
+    <link rel="stylesheet" href="{% static 'rental_app/css/rental.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="{% static 'rental_app/js/base.js' %}"></script>
     <title>Rental Guruji</title>
 </head>
@@ -28,8 +36,7 @@
                <li class="dropdown">
                   <a href="/" class="dropbtn">Rent</a>
                   <div class="dropdown-content">
-                     <a href="#">Rental</a>
-                     <a href="#">Rental and Fooding</a>
+                     <a href="/rental">Rental</a>
                      <a href="#">Lease</a>
                   </div>
                </li>

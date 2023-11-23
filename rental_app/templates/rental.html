@@ -7,13 +7,15 @@
     <input type="submit" name="submit" class="submit" value="Search">
 </form>
 <!-- Search bar ends -->
+{% for part in context %}
 <div class="wrapper">
-    <h1>PHILIPPINES</h1>
+    <h1>{{part.city}}</h1>
     <div class="image i1"></div>
-    <div class="details"><h1><em>Boracay Island</em></h1>
-    <h2>Surfer's Home</h2>
-    <p>3 Days - 2 Nights</p></div>
-    <h1>£750</h1>
+    <div class="details"><h1><em>Food {{part.food}}</em></h1>
+    <h2>{{part.name}}</h2>
+    <p>{{part.house}}</p></div>
+    <h1>{{part.cost}} ₹/night</h1>
 </div>
+{% endfor %}
 
 {% endblock %}

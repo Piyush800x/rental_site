@@ -9,4 +9,6 @@ urlpatterns = [
     path('createproduct', views.createproduct),
     path('rental', views.rental),
     path('contact', views.contact),
+    # path('upload_image', views.upload_image)
+    path('createproduct', views.createproduct)
 ]

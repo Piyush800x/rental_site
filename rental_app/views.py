@@ -27,10 +27,6 @@ def create(request):
     return render(request, "create.html")
 
 
-def listing(request):
-    return render(request, "listing.html")
-
-
 def rental(request):
     # places = ["Kolkata", "Burdwan", "Ranaghat", "Kalyani", "Naihati", "Barrackpur", "Krishnanagar", "Burdwan",
     #           "Shantipur", "Nabadwip", "Mayapur"]
@@ -60,9 +56,6 @@ def rental(request):
     # print("*************************")
     # print(full_list[0])
     context = get_all(request)
-    for i in context:
-        print(i["city"])
-
     return render(request, "rental.html", {"context": context})
 
 

@@ -25,8 +25,13 @@ def create(request):
 def listing(request):
     return render(request, "listing.html")
 
+
 def rental(request):
     return render(request, "rental.html")
+
+
+def contact(request):
+    return render(request, "contact.html")
 
 
 def create_data(request):

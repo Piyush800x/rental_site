@@ -1,4 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Contact Page</h1>
+
+<section class="sec">
+    <h1>Contact Us</h1>
+    <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+    <div class="contact-info">
+        <p>Email: shibammitra695@gmail.com</p>
+        <p>Phone: +91 7384143468</p>
+    </div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.7556271213703!2d88.44769197501451!3d22.959225279218185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f8951013978a67%3A0x74472f681659dcab!2sJIS%20School%20of%20polytechnic!5e0!3m2!1sen!2sin!4v1700749589867!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
 {% endblock %}

@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1 class="heading1">RENT NOW</h1>
+<!-- Search bar starts-->
+<form action="" method="GET" class="rent-form">
+    <input type="text" name="text" class="search" placeholder="Search here!">
+    <input type="submit" name="submit" class="submit" value="Search">
+</form>
+<!-- Search bar ends -->
 <div class="wrapper">
     <h1>PHILIPPINES</h1>
     <div class="image i1"></div>
@@ -9,5 +15,6 @@
     <p>3 Days - 2 Nights</p></div>
     <h1>£750</h1>
 </div>
+
 
 {% endblock %}

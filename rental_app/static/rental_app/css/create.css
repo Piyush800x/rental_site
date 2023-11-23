@@ -1,5 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "PT Sans";
+    font-weight: bold;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -40,3 +41,4 @@ input, select, textarea {
 .btn:hover {
     background-color: #45a049;
 }
+

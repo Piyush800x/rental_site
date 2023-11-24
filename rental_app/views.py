@@ -26,6 +26,8 @@ def about(request):
 def create(request):
     return render(request, "create.html")
 
+def rent(request):
+    return render(request, "rent.html")
 
 def rental(request):
     context = get_all(request)
@@ -59,6 +61,34 @@ def get_all(request):
 
     return full_list
 
+def search(request):
+    place = request.POST.get("place")
+    final_list = []
+    full_list = []
+    query = placedata.find({"place": place})
+    data_list = [result for result in query]
+    for j in range(len(data_list)):
+            # print(data_list[j].get("listings"))
+            # final_list.append(data_list[j]["listings"])
+            # print(data_list[j])
+            # print(type(data_list[j]))
+        final_list.append(data_list[j].get("listings"))
+    # print("------------------")
+    # print(final_list)
+
+    for i in range(len(final_list)):
+        print(final_list[i])
+        if final_list[i] != None:
+            for j in range(len(final_list[i])):
+                if final_list[i][j]:
+                    full_list.append(final_list[i][j])
+                else:
+                    full_list.append(final_list[i])
+
+    print("*************************")
+    print(full_list[0])
+
+    return render(request, "rental.html", {"context": full_list})
 
 def contact(request):
     return render(request, "contact.html")

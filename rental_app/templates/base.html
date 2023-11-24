@@ -56,6 +56,7 @@
                <li class="dropdown">
                   <a href="/" class="dropbtn">Sign in/Register</a>
                   <div class="dropdown-content">
+                     {% csrf_token %}
                      <a href="{% provider_login_url 'google' %}?next=/">Buyer</a>
                      <a href="{% provider_login_url 'google' %}?next=/">Seller</a>
                   </div>

@@ -16,7 +16,9 @@
     <h2>{{part.name}}</h2>
     <p>{{part.house}}</p></div>
     <h1>{{part.cost}} ₹/night</h1>
-    <button>Rent</button>
+    <form action="/rent">
+        <button>Rent</button>
+    </form>
 </div>
 {% endfor %}
 

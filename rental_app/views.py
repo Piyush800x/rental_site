@@ -28,33 +28,6 @@ def create(request):
 
 
 def rental(request):
-    # places = ["Kolkata", "Burdwan", "Ranaghat", "Kalyani", "Naihati", "Barrackpur", "Krishnanagar", "Burdwan",
-    #           "Shantipur", "Nabadwip", "Mayapur"]
-    # final_list = []
-    # full_list = []
-    # for i in range(len(places)):
-    #     query = placedata.find({"place": places[i]})
-    #     data_list = [result for result in query]
-    #     for j in range(len(data_list)):
-    #         # print(data_list[j].get("listings"))
-    #         # final_list.append(data_list[j]["listings"])
-    #         # print(data_list[j])
-    #         # print(type(data_list[j]))
-    #         final_list.append(data_list[j].get("listings"))
-    # print("------------------")
-    # print(final_list)
-
-    # for i in range(len(final_list)):
-    #     print(final_list[i])
-    #     if final_list[i] != None:
-    #         for j in range(len(final_list[i])):
-    #             if final_list[i][j]:
-    #                 full_list.append(final_list[i][j])
-    #             else:
-    #                 full_list.append(final_list[i])
-
-    # print("*************************")
-    # print(full_list[0])
     context = get_all(request)
     return render(request, "rental.html", {"context": context})
 
@@ -68,10 +41,6 @@ def get_all(request):
         query = placedata.find({"place": places[i]})
         data_list = [result for result in query]
         for j in range(len(data_list)):
-            # print(data_list[j].get("listings"))
-            # final_list.append(data_list[j]["listings"])
-            # print(data_list[j])
-            # print(type(data_list[j]))
             final_list.append(data_list[j].get("listings"))
     print("------------------")
     print(final_list)

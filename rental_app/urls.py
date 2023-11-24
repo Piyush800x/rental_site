@@ -9,5 +9,7 @@ urlpatterns = [
     path('rental', views.rental),
     path('contact', views.contact),
     # path('upload_image', views.upload_image)
-    path('createproduct', views.createproduct)
+    path('createproduct', views.createproduct), 
+    path('search', views.search),
+    path('rent', views.rent),
 ]

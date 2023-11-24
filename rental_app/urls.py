@@ -11,5 +11,5 @@ urlpatterns = [
     # path('upload_image', views.upload_image)
     path('createproduct', views.createproduct), 
     path('search', views.search),
-    path('rent', views.rent)
+    path('rent', views.rent),
 ]

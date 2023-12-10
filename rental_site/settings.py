@@ -25,6 +25,9 @@ load_dotenv(BASE_DIR / ".env")
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-*$5itc@y-p^i%@x1w%*x7#yl4&+k@z9xjr-h=^ah)vsx70@3iy'
 DB_NAME = os.getenv("DB_NAME")
+OAUTH_CLIENT_ID = os.getenv("OAUTH_CLIENT_ID")
+OAUTH_CLIENT_SECRET = os.getenv("OAUTH_CLIENT_SECRET")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -119,6 +122,24 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# SOCIALACCOUNT PROVIDERS
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        },
+        'APP': {
+            'client_id': OAUTH_CLIENT_ID,
+            'secret': OAUTH_CLIENT_SECRET,
+            'key': ''
+        }
+    }
+}
 
 
 # Internationalization
